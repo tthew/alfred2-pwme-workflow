@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>pwme</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>2073B1D1-F1C3-4F38-8A15-93C82544415A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9DEC43FF-AB40-4C73-AEC5-A74D7B1A51A8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>9DEC43FF-AB40-4C73-AEC5-A74D7B1A51A8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>78C61E22-0C22-489F-A2A8-65E2D1D2930E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>89A63537-493A-4875-AB15-BA2C6FBE2D45</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Matt Richards</string>
+	<key>description</key>
+	<string>Alfred2 wrapper for pwgen</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>pwme</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>pwme</string>
+				<key>subtext</key>
+				<string>Number of characters</string>
+				<key>text</key>
+				<string>Password Me</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2073B1D1-F1C3-4F38-8A15-93C82544415A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/local/bin/pwgen -cnysB1 {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9DEC43FF-AB40-4C73-AEC5-A74D7B1A51A8</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>78C61E22-0C22-489F-A2A8-65E2D1D2930E</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Your new password has been copied to the clipboard</string>
+				<key>title</key>
+				<string>Password Generator</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>89A63537-493A-4875-AB15-BA2C6FBE2D45</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Alfred2 'pwme' workflow
+
+&gt; Alfred2 workflow wrapper for `pwgen`
+
+Generate secure random passwords using pwgen and copy to the clipboard.
+
+## Prerequisites / installation
+
+`pwme` depends on `pwgen` and expects `pwgen` binary to be available at `/usr/local/bin/pwgen`
+
+`pwgen` is available as a Homebrew package, to install simply run:
+
+&gt; brew install pwgen
+
+## Usage
+
+`pwme {numberOfChars}`
+
+{numberOfCharacters} is optional, defaults to 8 if omitted.
+
+### Under the hood
+
+Calls pwgen with the following arguments:
+
+&gt; pwgen -cnysB1
+
+## License
+
+Apache-2</string>
+	<key>uidata</key>
+	<dict>
+		<key>2073B1D1-F1C3-4F38-8A15-93C82544415A</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>78C61E22-0C22-489F-A2A8-65E2D1D2930E</key>
+		<dict>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+		<key>89A63537-493A-4875-AB15-BA2C6FBE2D45</key>
+		<dict>
+			<key>ypos</key>
+			<real>160</real>
+		</dict>
+		<key>9DEC43FF-AB40-4C73-AEC5-A74D7B1A51A8</key>
+		<dict>
+			<key>ypos</key>
+			<real>20</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://lucidmoon.co.uk</string>
+</dict>
+</plist>
