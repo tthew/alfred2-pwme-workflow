@@ -10,7 +10,9 @@ Generate secure random passwords using pwgen and copy to the clipboard.
 
 `pwgen` is available as a Homebrew package, to install simply run:
 
-> brew install pwgen
+```bash
+brew install pwgen
+```
 
 ## Usage
 
@@ -22,7 +24,9 @@ Generate secure random passwords using pwgen and copy to the clipboard.
 
 Calls pwgen with the following arguments:
 
-> pwgen -cnysB1
+```bash
+pwgen -cnysB1
+```
 
 ## License
 
